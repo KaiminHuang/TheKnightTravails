@@ -9,7 +9,7 @@ public interface Position {
 	public int getColumnPos();
 	/**
 	 * Set The column position
-	 * @param a string indicates column position (A-H).
+	 * @param a integer indicates column position (A-H).
 	 * @throws InvalidInputException 
 	 */
 	public void setColumnPos(String pos) throws InvalidInputException;

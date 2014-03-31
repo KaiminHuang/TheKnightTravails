@@ -19,26 +19,10 @@ public class KnightImpl implements Pieces {
 
 	// define the type of this piece
 	private PieceType pieceType = PieceType.Knight;
-	// indicates the current position of the knight
-	private Position pos;
-
-	private List<Position> path = new ArrayList<Position>();
 
 	public KnightImpl() {
 	}
 
-	@Override
-	public void setPos(Position pos) {
-		// TODO Auto-generated method stub
-		this.pos = pos;
-		addToPath(pos);
-	}
-
-	@Override
-	public Position getPos() {
-		// TODO Auto-generated method stub
-		return this.pos;
-	}
 
 	@Override
 	public List<Position> getValidMove(Position pos) {
@@ -75,22 +59,5 @@ public class KnightImpl implements Pieces {
 		return possibleMoves;
 	}
 
-	public void addToPath(Position pos) {
-		// TODO Auto-generated method stub
-		this.path.add(pos);
-	}
 
-	public List<Position> getPath() {
-		// TODO Auto-generated method stub
-		return this.path;
-	}
-
-
-
-	public Position caculateNextMove() {
-		Position nextPos = this.pos;
-
-		return nextPos;
-
-	}
 }

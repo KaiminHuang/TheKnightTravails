@@ -6,7 +6,8 @@ import exception.InvalidInputException;
 public class PositionImpl implements Position {
 	private int ColumnPos = -1;
 	private int RowPos = -1;
-	// create a new position according to a string
+	
+	// create a new position according to a give string
 	public PositionImpl(String str) throws InvalidInputException {
 		if (isValid(str)) {
 			this.ColumnPos = Character.toUpperCase(str.charAt(0)) - 'A' + 1;
@@ -15,7 +16,7 @@ public class PositionImpl implements Position {
 			throw new InvalidInputException(str);
 		}
 	}
-	//create a new position according to two integer
+	//create a new position according to two given integer
 	public PositionImpl(int rowPos, int colPos) {
 		if (isValid(rowPos, colPos)) {
 			this.ColumnPos = colPos;
@@ -63,7 +64,7 @@ public class PositionImpl implements Position {
 		return (col + String.valueOf(this.RowPos));
 	}
 
-	// check whether str is a valid position as (a-z)(1-8)
+	// check whether string is a valid position as (a-z)(1-8)
 	private boolean isValid(String str) {
 		if (str.length() == 2) {
 			return str.matches("^[a-zA-Z][1-8]$");

@@ -3,7 +3,7 @@ package exception;
 import java.io.*;
 
 /**
- * A super class for all exceptions that occur in the baggage control.
+ * An exception that occurs when the position is out of the boundary of a board
  * 
  * @author Kaimin Huang
  */

@@ -5,7 +5,8 @@ import java.io.*;
 import components.Position;
 
 /**
- * A super class for all exceptions that occur in the baggage control.
+ * An exception that occurs when the input is not valid
+ * which means it's not like [a-h][1-8]
  * 
  * @author Kaimin Huang
  */

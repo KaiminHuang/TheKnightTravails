@@ -1,5 +1,6 @@
 package components;
 
+
 public interface Board {
 	/**
 	 * This interface has to be implemented by any board implementation.
@@ -21,46 +22,54 @@ public interface Board {
 	public void emptyBoard();
 
 	/**
-	 * Set the pieces to their initial positions.
-	 */
-	public void initialPosition();
-
-	/**
-	 * Set a piece on a given position.
+	 * Set a piece to initial positions.
 	 * 
 	 * @param piece
 	 *          The piece to set.
 	 * @param position
 	 *          The position to set the piece on.
 	 */
-	public void setPiece(Pieces piece, Position position);
+	public void initiaSetPiece(Pieces piece, Position position);
+	
+	/**
+	 * move a piece to a given position.
+	 * 
+	 * @param piece
+	 *          The piece to move.
+	 * @param position
+	 *          The new position of the piece.
+	 */
+	public void movePiece(Pieces piece, Position position);
+	
+
+	/**
+	 * get the position of given piece.
+	 * 
+	 * @param the
+	 *          piece that you want to know the position
+	 */
+	public Position getPos(Pieces piece);
 
 	/**
 	 * Set the end/target position.
-	 * @param position of the target
+	 * 
+	 * @param position
+	 *          of the target
 	 */
 	public void setEndPos(Position endPos);
-	
+
 	/**
 	 * Get the end/target position.
 	 */
 	public Position getEndPos();
-	
-	/**
-	 * Move a piece from one square to another.
-	 * 
-	 * @param ply
-	 *          The move to perform.
-	 */
-//	public void doPly(Ply ply);
 
 	/**
-	 * Return a new board, that results from a given ply.
+	 * check whether the piece is at the end position
 	 * 
-	 * @param ply
-	 *          The ply to perform.
-	 * 
-	 * @return A new board with the game position after the ply.
+	 * @param piece
+	 *          The target piece
+	 * @return boolean
 	 */
-//	public Cheeseboard getBoardAfterPly(Ply ply);
+	public boolean isReachEnd(Pieces piece);
+
 }

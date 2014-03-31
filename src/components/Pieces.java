@@ -11,16 +11,6 @@ import java.util.List;
  */
 
 public interface Pieces {
-	/**
-	 * Set The current position of knights
-	 * @param a position
-	 */
-	public void setPos(Position pos);
-	
-	/**
-	 * @return The current position of the knight
-	 */
-	public Position getPos();
 	
 	/**
 	 *  @return The valid moves of piece.
